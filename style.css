@@ -1,0 +1,427 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+nav {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10vh;
+}
+
+.nav-part2 {
+  display: flex;
+  gap: 8vh;
+  align-items: center;
+}
+
+.nav-part2 i {
+  display: none;
+}
+
+nav h2 {
+  font-size: 6vh;
+}
+
+nav h4 {
+  font-size: 3vh;
+  font-weight: lighter;
+}
+
+.main-contect {
+  height: calc(100% - 80px);
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.left {
+  width: 50%;
+  height: 100%;
+  padding: 0 10vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.left h2 {
+  font-size: 7vh;
+  line-height: 7vh;
+  margin-bottom: 1vh;
+}
+
+.left p {
+  font-size: 3vh;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  font-weight: lighter;
+}
+
+.left span {
+  color: #0b4870;
+}
+
+.left button {
+  padding: 2.5vh 4vh;
+  border-radius: 1vh;
+  border: none;
+  font-size: 3vh;
+  width: 35%;
+  background-color: #0b4870;
+  color: #eef0f2;
+  cursor: pointer;
+}
+
+.right {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.right img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.main-section-two {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: 10vh;
+  text-align: center;
+  width: 100%;
+  background-color: #0b4870bc;
+}
+
+.main-section-two p {
+  font-size: 3vh;
+  color: white;
+  width: 80%;
+  font-weight: lighter;
+}
+
+.main-section-two h3 {
+  font-size: 3vh;
+  color: black;
+  width: 80%;
+  margin-bottom: 3vh;
+  font-weight: bolder;
+  
+}
+
+.pricing-section {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  padding: 5vh 2vh; /* Adjusted padding */
+  align-items: center;
+  text-align: center;
+  
+
+}
+.pricing-section p {
+  width: 90%;
+  padding: 3vh;
+  font-size: 2vh;
+ 
+}
+.pricing-section span {
+  color: white;
+ 
+}
+
+.price-box {
+  width: 80%;
+  margin-top: 2vh;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow wrapping for small screens */
+  gap: 2vh; /* Space between boxes */
+  color: black;
+}
+
+.box {
+  height: auto; /* Adjust height to fit content */
+  width: 30%; /* Slightly adjusted width for better fit */
+  border: 2px solid #fff; /* Use a single border color for simplicity */
+  background-color: #fff; /* White background for better contrast */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  border-radius: 8px; /* Rounded corners */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px; /* Adjusted padding */
+  transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.box:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+}
+
+.box button {
+  width: 80%; /* Adjusted width for better appearance */
+  padding: 15px;
+  margin-top: 2vh;
+  background-color: #0b4870; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.box button:hover {
+  background-color: #083857; /* Darker shade on hover */
+}
+
+.box h3 {
+  font-size: 24px; /* Adjusted font size */
+  margin-bottom: 1vh; /* Space below heading */
+}
+
+.box img {
+  height: auto;
+  width: 50%; /* Adjusted size to fit within box */
+  object-fit: contain;
+  margin-bottom: 1vh; /* Space below image */
+}
+.stats-section {
+  position: relative; /* Needed for pseudo-element positioning */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10vh;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: black;
+  font-size: larger;
+  overflow: hidden; /* Hide any overflow from the pseudo-element */
+}
+
+.stats-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/domenico-loia-hGV2TfOh0ns-unsplash.jpg'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4; /* Desired opacity for the background image */
+  z-index: -1; /* Place behind the content */
+}
+
+.inner-stats {
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  padding: 2vh;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping for small screens */
+  gap: 2vh; /* Space between boxes */
+}
+
+.stats-section h1 {
+  font-size: 50px;
+}
+.stats-section p {
+  font-size: 22px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.stats-box {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  background-color: #083857;
+  color: white;
+  display: flex; /* Center content */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Center text */
+  padding: 22px; /* Adjust padding */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.stats-box:hover {
+  transform: translateY(10px); /* Lift effect on hover */
+}
+
+.stats-box i {
+  font-size: 3em; /* Adjust icon size */
+  margin-bottom: 10px; /* Space below icon */
+}
+
+.stats-box h1 {
+  font-size: 2em; /* Adjust heading size */
+  margin-bottom: 5px; /* Space below heading */
+}
+
+.stats-box p {
+  font-size: 1em; /* Adjust paragraph size */
+  margin-top: 5px; /* Space above paragraph */
+}
+.section-cta {
+  position: relative;
+  width: 100%;
+  height: 80%; /* Ensure it takes up the full height of its parent */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cta-left {
+  width: 50%;
+  height: 100%;
+  padding: 10vh;
+  color: white;
+  display: flex; /* Flex display to center content */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Center text */
+  background-color: #083857;
+}
+
+.cta-left h1 {
+  font-size: 50px;
+  font-weight: 800;
+  width: 100%;
+}
+
+.cta-left p {
+  font-size: 20px;
+  padding: 2vh 0;
+}
+
+.cta-left button {
+  padding: 15px 45px;
+  margin-top: 2vh;
+  background-color: #0b4870;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 20px;
+}
+
+.cta-left button:hover {
+  background-color: #083857;
+}
+
+.cta-right {
+  width: 50%;
+  height: 100%; /* Ensure it takes up the full height of its parent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Hide any overflow */
+  position: relative; /* Ensure relative positioning */
+  
+}
+
+.cta-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures the image covers the container without stretching */
+  object-position: center; /* Centers the image */
+  position: absolute; /* Absolute positioning to cover the parent */
+  top: 0;
+  left: 0;
+}
+
+
+
+
+
+
+
+/* Responsive CSS */
+@media (max-width: 600px) {
+  .nav-part2 h4 {
+      display: none;
+  }
+  .nav-part2 i {
+      display: block;
+  }
+
+  nav {
+      padding: 12px 20px;
+  }
+
+  nav h2 {
+      font-size: 25px;
+  }
+
+  .main-contect {
+      flex-direction: column;
+      height: calc(100% - 70px);
+  }
+
+  .left {
+      height: 50%;
+      width: 100%;
+      padding: 10vh 40px;
+      background-color: #0b487040;
+  }
+
+  .left h2 {
+      font-size: 20px;
+      line-height: 3vh;
+  }
+
+  .left p {
+      font-size: 15px;
+      margin-top: 0;
+  }
+
+  .left button {
+      font-size: 2vh;
+      padding: 1vh;
+      width: 40%;
+      margin-top: 0;
+  }
+
+  .right {
+      height: 50%;
+      width: 100%;
+  }
+
+  .price-box {
+      flex-direction: column; /* Stack boxes vertically on small screens */
+  }
+
+  .box {
+      width: 100%; /* Full width for each box */
+      margin-bottom: 2vh; /* Space between boxes */
+  }
+}
